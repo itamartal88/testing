@@ -1,0 +1,33 @@
+
+
+<div id='showNumber'><span>time:{{time}}</span><br><br>{{currentNum}}</div>
+ <div id='rolateDiv'>
+ <img (click)='getCoordinates($event)' id='rolateImg' height="300px" width="350px" src='assets/images/rolate.jpg' />
+ </div>
+ <p id='chipsHeader'><u>pick chips</u></p> 
+ <div id='chip50'>    
+ <img id='50' (click)='getChipValue($event)' height="100px" width="100px" src='assets/images/chips-50.jpg' /><br>
+  </div>
+  <div id='chip100'>
+    <img id='100' (click)='getChipValue($event)' height="100px" width="100px" src='assets/images/chips-100.jpg' /><br>
+  </div>
+  <div id='chip500'>
+  <img id='500' (click)='getChipValue($event)' height="100px" width="100px" src='assets/images/chips-500.jpg' />
+  </div>
+  <div id='clearBoard'><button (click)='clearBoard()'>clear board</button></div>
+<div id='credit'>
+ <span>your credit:{{credit}}</span>
+ <!--<app-rolate-canvas></app-rolate-canvas>-->
+<!-- <canvas #myCanvas id="myCanvas" width="500" height="500" style="border:1px solid #000000; "></canvas>-->
+ 
+</div>
+
+<div id="container">
+                <ul class="circle">
+                        <li *ngFor='let num of rolateNum'>
+                          <div [ngStyle]="{'background-color':getColor(num) }" class="text">{{num}}</div>
+                        </li>
+                    </ul>
+         </div>
+
+  
